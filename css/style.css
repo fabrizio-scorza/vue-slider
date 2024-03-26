@@ -14,8 +14,8 @@
     display: flex;
 }
 
-.item .active {
-    float: right;
+.item {
+    float: left;
     width: 800px;
     height: 500px;
     position: relative;

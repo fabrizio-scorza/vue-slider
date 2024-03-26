@@ -31,5 +31,13 @@ createApp ({
             ],
             currentImageIndex: 0,
         }
+    },
+    methods: {
+        nextImg(){
+            return this.currentImageIndex < 4 ? this.currentImageIndex++ : this.currentImageIndex = 0
+        },
+        prevImg(){
+            return this.currentImageIndex > 0 ? this.currentImageIndex-- : this.currentImageIndex = 4
+        }
     }
 }).mount('#app')
