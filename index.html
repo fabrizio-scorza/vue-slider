@@ -30,8 +30,8 @@
                 </div>
 
                 <div class="thumbs">
-                    <div class="prev"></div>
-                    <div class="next"></div>
+                    <div class="prev" @click= "currentImageIndex--"></div>
+                    <div class="next" @click= "currentImageIndex++"></div>
                     <div class="thumb" v-for= "(thumb) in slides">
                         <img :src="thumb.image" alt="Spiderman" />
                     </div>
