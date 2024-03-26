@@ -16,10 +16,11 @@
 
         <div class="container">
             <div class="slider-wrapper" tabindex="0">
-
+                <!-- ciclo for che inserisce in pagina tutti gli elementi dell'array-->
                 <div class="item" v-for= "(slide,i) in slides">
+                    <!--if che assegna la classe active solo all'elemento corrispondente al currentIndex-->
                     <div v-if= "i === currentImageIndex" class="active">
-                        <img :src="slide.image" alt="Spiderman" />
+                        <img :src="slide.image" :alt="slide.title" />
                         <div class="text">
                             <h3>{{ slide.title }}</h3>
                             <p>
@@ -30,10 +31,11 @@
                 </div>
 
                 <div class="thumbs">
+                    <!-- ascolto del click che aumenta o diminuisce il currentIndex se è compreso tra 0 e 4 se no lo resetta -->
                     <div class="prev" @click= "currentImageIndex > 0 ? currentImageIndex-- : currentImageIndex = 4"></div>
                     <div class="next" @click= "currentImageIndex < 4 ? currentImageIndex++ : currentImageIndex = 0"></div>
                     <div class="thumb" v-for= "(thumb) in slides">
-                        <img :src="thumb.image" alt="Spiderman" />
+                        <img :src="thumb.image" :alt="thumb.title" />
                     </div>
                 </div>
 
