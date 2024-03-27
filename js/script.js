@@ -39,5 +39,9 @@ createApp ({
         prevImg(){
             return this.currentImageIndex > 0 ? this.currentImageIndex-- : this.currentImageIndex = 4
         }
+    },
+    mounted(){
+        setInterval(interval => {this.currentImageIndex < 4 ? this.currentImageIndex++ : this.currentImageIndex = 0}, 1000*3)
     }
 }).mount('#app')
+
