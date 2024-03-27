@@ -41,7 +41,7 @@ createApp ({
         }
     },
     mounted(){
-        setInterval(interval => {this.currentImageIndex < 4 ? this.currentImageIndex++ : this.currentImageIndex = 0}, 1000*3)
+        setInterval(this.nextImg, 1000*3)
     }
 }).mount('#app')
 
