@@ -30,6 +30,7 @@ createApp ({
                 }
             ],
             currentImageIndex: 0,
+            autoplay: null,
         }
     },
     methods: {
@@ -38,10 +39,17 @@ createApp ({
         },
         prevImg(){
             return this.currentImageIndex > 0 ? this.currentImageIndex-- : this.currentImageIndex = 4
+        },
+        stopInterval(){
+            clearInterval(this.autoplay)
+            this.autoplay = null
+        },
+        startInterval(){
+            this.autoplay = setInterval(this.nextImg, 1000*3)
         }
     },
     mounted(){
-        setInterval(this.nextImg, 1000*3)
+        this.startInterval()
     }
 }).mount('#app')
 

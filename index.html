@@ -26,7 +26,7 @@
                     </div>
                 </div>
 
-                <div class="thumbs">
+                <div class="thumbs" @mouseenter="stopInterval()" @mouseleave="startInterval()">
                     <!-- ascolto del click che aumenta o diminuisce il currentIndex se è compreso tra 0 e 4 se no lo resetta -->
                     <div class="prev" @click= "prevImg()"></div>
                     <div class="next" @click= "nextImg()"></div>
