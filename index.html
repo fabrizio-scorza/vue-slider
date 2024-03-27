@@ -28,8 +28,8 @@
 
                 <div class="thumbs" @mouseenter="stopInterval()" @mouseleave="startInterval()">
                     <!-- ascolto del click che aumenta o diminuisce il currentIndex se è compreso tra 0 e 4 se no lo resetta -->
-                    <div class="prev" @click= "prevImg()"></div>
-                    <div class="next" @click= "nextImg()"></div>
+                    <div class="prev" @click= "prevImg()"><i class="fa-solid fa-caret-up"></i></div>
+                    <div class="next" @click= "nextImg()"><i class="fa-solid fa-caret-down"></i></div>
                     <div class="thumb"@click= "currentImageIndex = i" :class="i === currentImageIndex ? 'active' : ''" v-for= "(thumb,i) in slides">
                         <img :src="thumb.image" :alt="thumb.title" />
                     </div>
@@ -41,6 +41,7 @@
     </div>
 
     <script src="./js/script.js"></script>
+    <script src="https://kit.fontawesome.com/c621ff4416.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

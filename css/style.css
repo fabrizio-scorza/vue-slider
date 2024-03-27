@@ -12,10 +12,11 @@
 }
 .slider-wrapper{
     display: flex;
+    border: 4px solid silver;
+    box-shadow: 8px 12px 10px;
 }
 
 .item {
-    float: left;
     width: 800px;
     height: 500px;
     position: relative;
@@ -36,7 +37,6 @@
 }
 
 .thumbs {
-    float: left;
     height: 500px;
     background: #000;
     position: relative;
@@ -44,6 +44,7 @@
 
 .thumb {
     height: calc((500px) / 5);
+    width: 250px;
     opacity: 0.5;
 }
 
@@ -54,55 +55,25 @@
 }
 
 .thumb.active {
-    border: 2px solid #ccc;
+    border: 2px solid silver;
     opacity: 1;
 }
 
 .prev, .next {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     margin: 10px 0;
     border-radius: 50%;
-    background: #ccc;
+    background: silver;
     position: absolute;
     left: 50%;
     transform: translate(-50%);
     cursor: pointer;
     z-index: 999;
+    text-align: center;
+    line-height: 24px;
 }
 
 .next {
     bottom: 0;
-}
-
-/*
-EXTRA: in questo esempio gli accordion vengono creati
-usando 2 bordi di un quadratino ruotato di 45 gradi
-In una versione base si possono usare delle icone
-oppure i caratteri ∧ (&and;) e ∨ (&or;)
- */
-.prev::after {
-    content: '';
-    width: 10px;
-    height: 10px;
-    border-top: 1px solid black;
-    border-right: 1px solid black;
-    display: block;
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%) rotate(-45deg);
-}
-
-.next::before {
-    content: '';
-    width: 10px;
-    height: 10px;
-    border-top: 1px solid black;
-    border-right: 1px solid black;
-    display: block;
-    position: absolute;
-    bottom: 35%;
-    left: 50%;
-    transform: translate(-50%) rotate(135deg);
 }
